@@ -41,12 +41,15 @@ const CyclePhasePanel = () => {
             </p>
 
             <div className="flex flex-col items-center justify-center relative h-44">
-              <div className="relative w-36 h-[7rem] overflow-hidden rounded-t-full bg-pink-100 flex justify-center items-end">
+              <div className="relative w-38 h-[7rem] overflow-hidden rounded-t-full bg-gray-300 flex justify-center items-end">
+              <div className="relative w-37 h-[5.9rem] overflow-hidden rounded-t-full bg-pink-100 flex justify-center items-end">
+
                 <div className="absolute bottom-0 w-full h-4/5 bg-pink-600 flex flex-col items-center justify-center rounded-t-full">
                   <span className="text-white text-sm">Period in</span>
                   <span className="text-white text-xl font-bold leading-none">
                     3 Days
                   </span>
+                </div>
                 </div>
               </div>
             </div>

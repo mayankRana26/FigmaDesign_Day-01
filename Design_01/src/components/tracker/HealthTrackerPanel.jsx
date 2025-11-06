@@ -18,8 +18,8 @@ const HealthTrackerPanel = () => {
     { emoji: "😬", label: "Acne" },
   ];
 
-  const [selectedMood, setSelectedMood] = useState("😩 Fatigue");
-  const [selectedSymptoms, setSelectedSymptoms] = useState(["Fatigue"]);
+  const [selectedMood, setSelectedMood] = useState("😴 Tired");
+  const [selectedSymptoms, setSelectedSymptoms] = useState(["😩 Fatigue"]);
 
   const toggleSymptom = (label) => {
     setSelectedSymptoms((prev) =>
@@ -50,7 +50,6 @@ const HealthTrackerPanel = () => {
                 }`}
               >
                 <span>{emoji}</span>
-                <span>{label}</span>
               </button>
             );
           })}
@@ -101,6 +100,7 @@ const HealthTrackerPanel = () => {
                 type="checkbox"
                 checked={selectedSymptoms.includes(label)}
                 onChange={() => toggleSymptom(label)}
+                onClick={(e) => e.stopPropagation()}
                 className="h-4 w-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
               />
             </div>
